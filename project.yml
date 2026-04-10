@@ -1,0 +1,69 @@
+name: TypeBoi
+options:
+  bundleIdPrefix: com.typeboi
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    SWIFT_STRICT_CONCURRENCY: targeted
+    IPHONEOS_DEPLOYMENT_TARGET: "18.0"
+
+configs:
+  Debug: debug
+  Release: release
+
+targets:
+  TypeBoi:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - TypeBoi
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.typeboi.app
+        INFOPLIST_FILE: TypeBoi/Resources/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+          XCCONFIG_FILE: Config.xcconfig
+        Release:
+          XCCONFIG_FILE: Config.xcconfig
+    entitlements:
+      path: TypeBoi/Resources/TypeBoi.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.typeboi.app
+    dependencies:
+      - target: ShareExtension
+        embed: true
+
+  ShareExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - ShareExtension
+      # 메인 앱과 공유하는 파일
+      - path: TypeBoi/Shared/Models/Language.swift
+      - path: TypeBoi/Shared/Components/ResultCardView.swift
+      - path: TypeBoi/Shared/Components/WritingToolsTextView.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.typeboi.app.share
+        INFOPLIST_FILE: ShareExtension/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    entitlements:
+      path: ShareExtension/ShareExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.typeboi.app

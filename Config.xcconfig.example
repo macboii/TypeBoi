@@ -1,0 +1,8 @@
+// Config.xcconfig.example
+// Config.xcconfig 파일로 복사 후 실제 값 입력
+// Config.xcconfig 는 .gitignore 에 포함됨 (절대 커밋 금지)
+//
+// 교정: iOS Writing Tools (네이티브) — API 키 불필요
+// 번역: Apple Translation framework (네이티브) — API 키 불필요
+//
+// 현재 외부 API 없음. 향후 필요 시 아래에 추가.
