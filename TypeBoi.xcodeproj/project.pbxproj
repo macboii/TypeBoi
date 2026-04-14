@@ -11,21 +11,34 @@
 		1BAA17DE111987D4D49E3F45 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF68EF549375AB3C343ADEE /* Language.swift */; };
 		200F863DF64A8DFACA975E88 /* WritingToolsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849CA66450310ADA4B7C942 /* WritingToolsTextView.swift */; };
 		3BBF9DA70F05075AAD1AE2C9 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 697777E79E041B34B4922F93 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3EA1F78D3D7607CB112B851C /* KeyboardAIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3645156F0EF032AA42CE6BA /* KeyboardAIHandler.swift */; };
 		45E0B9E52881CF3C34D23191 /* ShareExtensionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73A27C92122A16988A9606 /* ShareExtensionViewModel.swift */; };
 		4F351ED7E2E66FA50960A4A3 /* CorrectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294823BB13A8C8AD65A3B963 /* CorrectViewModel.swift */; };
+		51D37A80C1F94B673977D601 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449674D1B634082989CAB2C /* CoinManager.swift */; };
 		523567F0868D4CBBEFB280C8 /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590ADBE63C01B9B11DE59DF3 /* CorrectView.swift */; };
+		568834B431A586EF9BFE0B4B /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA67F0C1472230D32AA73A1 /* AIService.swift */; };
 		56B3AD9CD07A3E3A917C494B /* ShareExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88910E18529F40CB26F492DC /* ShareExtensionView.swift */; };
 		768F2669F9E7D372BBD5547D /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F11680B6C2FA941D602B0 /* TranslateViewModel.swift */; };
 		7B96A6E0C48613571AB23F18 /* WritingToolsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849CA66450310ADA4B7C942 /* WritingToolsTextView.swift */; };
+		90012BBA9B2501801586546A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67F347B81B00FBDF21CA41 /* KeyboardViewController.swift */; };
 		974791F5C5F501D695D0569C /* TypeBoiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F977E9FDFC1CE1B19B74DD2 /* TypeBoiApp.swift */; };
 		9C041568E1D0309A4694D23D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF68EF549375AB3C343ADEE /* Language.swift */; };
 		A03F2CA22177FB24E21DC651 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB24B169D71442518D131E4 /* ShareViewController.swift */; };
 		D2F33DE28E3D1BF63B46879F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44228CDF59AF8086D26305 /* ContentView.swift */; };
 		D45FCD5F36E696E72C5232FB /* ResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D67A63535A46790DD76295 /* ResultCardView.swift */; };
 		DE6CD41AE6A838EDD0A7D748 /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFB7B2CCF872073B1D0909 /* TranslateView.swift */; };
+		F58DF56A5C0D63ACE2743258 /* KeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3F35E34865DA7D5126A7CE9D /* KeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD19C930937AB157BFCBE15A /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449674D1B634082989CAB2C /* CoinManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		80E4599D4502E9C0D3388B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BA0FBF0D4FC5C607CD44A8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4982141AB8509A9BC79ECE;
+			remoteInfo = KeyboardExtension;
+		};
 		DB0CF5E0C5B58F80704F8347 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8BA0FBF0D4FC5C607CD44A8D /* Project object */;
@@ -43,6 +56,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				3BBF9DA70F05075AAD1AE2C9 /* ShareExtension.appex in Embed Foundation Extensions */,
+				F58DF56A5C0D63ACE2743258 /* KeyboardExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,8 +66,11 @@
 /* Begin PBXFileReference section */
 		1849CA66450310ADA4B7C942 /* WritingToolsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingToolsTextView.swift; sourceTree = "<group>"; };
 		1F977E9FDFC1CE1B19B74DD2 /* TypeBoiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBoiApp.swift; sourceTree = "<group>"; };
+		2449674D1B634082989CAB2C /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		294823BB13A8C8AD65A3B963 /* CorrectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectViewModel.swift; sourceTree = "<group>"; };
+		2E67F347B81B00FBDF21CA41 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		32F83C33E5576E01E1D2A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3F35E34865DA7D5126A7CE9D /* KeyboardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = KeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF68EF549375AB3C343ADEE /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		57DFB7B2CCF872073B1D0909 /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
 		590ADBE63C01B9B11DE59DF3 /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
@@ -64,8 +81,11 @@
 		96B0A03110EF3DD12B272434 /* TypeBoi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TypeBoi.entitlements; sourceTree = "<group>"; };
 		9CA32F63D21DD315C8B1CF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ADB24B169D71442518D131E4 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		C3645156F0EF032AA42CE6BA /* KeyboardAIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAIHandler.swift; sourceTree = "<group>"; };
+		CBA67F0C1472230D32AA73A1 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
 		CC73A27C92122A16988A9606 /* ShareExtensionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionViewModel.swift; sourceTree = "<group>"; };
 		CE44228CDF59AF8086D26305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBCFC87E071158852D630EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E50F11680B6C2FA941D602B0 /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 		F99B6CE488DF7BADF4779E02 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +114,7 @@
 			children = (
 				84EBE1E758ADC2FA0C7C43CA /* Components */,
 				79A63E5B23DBEE358D2FACBD /* Models */,
+				C5CC60E085817E7DF825309B /* Services */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -139,19 +160,40 @@
 		9AEDE81FEAA769731BF00916 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3F35E34865DA7D5126A7CE9D /* KeyboardExtension.appex */,
 				697777E79E041B34B4922F93 /* ShareExtension.appex */,
 				71AE09E93E76389B5F8878FD /* TypeBoi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AF78BAB2E885B267B7A36019 /* KeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DBCFC87E071158852D630EC2 /* Info.plist */,
+				C3645156F0EF032AA42CE6BA /* KeyboardAIHandler.swift */,
+				2E67F347B81B00FBDF21CA41 /* KeyboardViewController.swift */,
+			);
+			path = KeyboardExtension;
+			sourceTree = "<group>";
+		};
 		BC3DA9D4860663F417B870F6 = {
 			isa = PBXGroup;
 			children = (
+				AF78BAB2E885B267B7A36019 /* KeyboardExtension */,
 				754D35B0869CCD8553E4A58C /* ShareExtension */,
 				EA9A8E7E4051CB2C4D78952D /* TypeBoi */,
 				9AEDE81FEAA769731BF00916 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		C5CC60E085817E7DF825309B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CBA67F0C1472230D32AA73A1 /* AIService.swift */,
+				2449674D1B634082989CAB2C /* CoinManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C79E092BBD11912744DBAD4C /* Features */ = {
@@ -186,6 +228,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE4982141AB8509A9BC79ECE /* KeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337B250E814CA4921ED50BAA /* Build configuration list for PBXNativeTarget "KeyboardExtension" */;
+			buildPhases = (
+				EF30434F1DF8991FFD62684B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardExtension;
+			packageProductDependencies = (
+			);
+			productName = KeyboardExtension;
+			productReference = 3F35E34865DA7D5126A7CE9D /* KeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D8D1A8C908D845C5B08DF073 /* ShareExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 477EFFB79B4DBB7145E2AE69 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
@@ -214,6 +273,7 @@
 			);
 			dependencies = (
 				2529404039FF7CD020C64921 /* PBXTargetDependency */,
+				CEA9DFA814300169CA92A584 /* PBXTargetDependency */,
 			);
 			name = TypeBoi;
 			packageProductDependencies = (
@@ -231,6 +291,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					CE4982141AB8509A9BC79ECE = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					D8D1A8C908D845C5B08DF073 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -255,6 +319,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				CE4982141AB8509A9BC79ECE /* KeyboardExtension */,
 				D8D1A8C908D845C5B08DF073 /* ShareExtension */,
 				ED3B6559DB5891ABB8BF5E64 /* TypeBoi */,
 			);
@@ -262,10 +327,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF30434F1DF8991FFD62684B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD19C930937AB157BFCBE15A /* CoinManager.swift in Sources */,
+				3EA1F78D3D7607CB112B851C /* KeyboardAIHandler.swift in Sources */,
+				90012BBA9B2501801586546A /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7AF0526EF08FFE323EAF8C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568834B431A586EF9BFE0B4B /* AIService.swift in Sources */,
+				51D37A80C1F94B673977D601 /* CoinManager.swift in Sources */,
 				D2F33DE28E3D1BF63B46879F /* ContentView.swift in Sources */,
 				523567F0868D4CBBEFB280C8 /* CorrectView.swift in Sources */,
 				4F351ED7E2E66FA50960A4A3 /* CorrectViewModel.swift in Sources */,
@@ -299,9 +376,32 @@
 			target = D8D1A8C908D845C5B08DF073 /* ShareExtension */;
 			targetProxy = DB0CF5E0C5B58F80704F8347 /* PBXContainerItemProxy */;
 		};
+		CEA9DFA814300169CA92A584 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4982141AB8509A9BC79ECE /* KeyboardExtension */;
+			targetProxy = 80E4599D4502E9C0D3388B48 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		011C508C9A835F36D028F64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KeyboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typeboi.app.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		0652D5EA0FBE58E21648B9A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,11 +468,28 @@
 			};
 			name = Debug;
 		};
+		1FE8EBED6835FCABA71475F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KeyboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typeboi.app.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2B3A28847D799BE915DF021C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TypeBoi/Resources/TypeBoi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -393,7 +510,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TypeBoi/Resources/TypeBoi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -414,7 +530,6 @@
 		9E463C87FE3F10604A799E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareExtension/Info.plist;
@@ -492,7 +607,6 @@
 		EE22613D67AAF00F8A6BCEFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareExtension/Info.plist;
@@ -511,6 +625,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		337B250E814CA4921ED50BAA /* Build configuration list for PBXNativeTarget "KeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011C508C9A835F36D028F64A /* Debug */,
+				1FE8EBED6835FCABA71475F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		477EFFB79B4DBB7145E2AE69 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

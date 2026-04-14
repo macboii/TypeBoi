@@ -1,28 +1,39 @@
 # API / 서비스 연동 규칙
 
-## OpenAI (교정)
-- 모델: `gpt-4o-mini` (비용 효율)
-- Supabase Edge Function 또는 직접 호출 (API 키 노출 주의)
-- iOS 앱에서 직접 OpenAI 호출 시 → Supabase 프록시 경유
-
 ## Apple Translation API (번역)
-- iOS 17+ 필수
+- iOS 18+ 필수 (`TranslationSession`)
 - `Translation` framework import
 - 오프라인 지원 (언어팩 다운로드 후)
-- fallback: DeepL API
+- **Extension 제약**: `TranslationSession`은 `translationTask` 컨텍스트(SwiftUI) 또는 `UIView.translationTask`(UIKit) 에서만 세션 획득 가능. Keyboard Extension 내부에서 직접 호출 불가 → App Groups IPC 방식으로 메인 앱에 번역 위임 (Week 2에서 구현)
 
-## DeepL (번역 fallback)
-- Apple Translation 미지원 언어 또는 iOS 16 이하 대응
-- Supabase Edge Function 경유
+## iOS Writing Tools (교정)
+- iOS 18+ 내장 기능 — 외부 API 없음
+- `UITextView` 기반 (`WritingToolsTextView` 래퍼 사용)
+- OpenAI / Supabase 프록시 불필요
 
-## Vision Framework (OCR, Phase 3)
+## Vision Framework (OCR, Week 2)
 - `VNRecognizeTextRequest` 사용
 - 언어 힌트 제공으로 정확도 향상
-- 처리는 백그라운드 스레드
+- 처리는 반드시 백그라운드 스레드 (`DispatchQueue.global()`)
 
-## Supabase
-- 기존 프로젝트 재사용 (textBoi 인프라)
-- Edge Functions: openai-proxy, gateway-proxy 재활용 검토
+## Speech / AVSpeechSynthesizer (Voice, Week 4)
+- 음성 인식: `SFSpeechRecognizer` + `AVAudioEngine`
+- 음성 출력: `AVSpeechSynthesizer`
+- 마이크 권한: `NSMicrophoneUsageDescription` 필수
+- 음성 인식 권한: `NSSpeechRecognitionUsageDescription` 필수
+
+## AdMob (광고, Week 3)
+- Rewarded Ads만 사용 (코인 지급 목적)
+- SPM: `https://github.com/googleads/swift-package-manager-google-mobile-ads`
+- AdMob App ID: `Config.xcconfig` → Info.plist 경유
+- `AdManager` 싱글턴으로 분리 — 나중에 교체 가능한 구조 유지
+- 광고 로드 실패 시 코인 차감 없이 무시 (강제 광고 금지)
+- 앱 시작 시 미리 prefetch (`loadAd()` 호출)
+
+## AI 추상화 (AIService)
+- 번역/교정 구현체를 직접 호출하지 않는다
+- `AIService` 프로토콜 경유 → 향후 외부 LLM 교체 용이
+- `rules/swift.md` 패턴 참고
 
 ## API 키 관리
 - `Config.xcconfig` → Info.plist 경유

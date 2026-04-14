@@ -37,13 +37,16 @@ targets:
           XCCONFIG_FILE: Config.xcconfig
         Release:
           XCCONFIG_FILE: Config.xcconfig
-    entitlements:
-      path: TypeBoi/Resources/TypeBoi.entitlements
-      properties:
-        com.apple.security.application-groups:
-          - group.com.typeboi.app
+    # entitlements: App Groups 활성화 시 Developer 계정에서 group.com.typeboi.shared 등록 후 아래 주석 해제
+    # entitlements:
+    #   path: TypeBoi/Resources/TypeBoi.entitlements
+    #   properties:
+    #     com.apple.security.application-groups:
+    #       - group.com.typeboi.shared
     dependencies:
       - target: ShareExtension
+        embed: true
+      - target: KeyboardExtension
         embed: true
 
   ShareExtension:
@@ -62,8 +65,29 @@ targets:
         INFOPLIST_FILE: ShareExtension/Info.plist
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: ""
-    entitlements:
-      path: ShareExtension/ShareExtension.entitlements
-      properties:
-        com.apple.security.application-groups:
-          - group.com.typeboi.app
+    # entitlements: App Groups 활성화 시 아래 주석 해제
+    # entitlements:
+    #   path: ShareExtension/ShareExtension.entitlements
+    #   properties:
+    #     com.apple.security.application-groups:
+    #       - group.com.typeboi.shared
+
+  KeyboardExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - KeyboardExtension
+      - path: TypeBoi/Shared/Services/CoinManager.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.typeboi.app.keyboard
+        INFOPLIST_FILE: KeyboardExtension/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    # entitlements: App Groups 활성화 시 아래 주석 해제
+    # entitlements:
+    #   path: KeyboardExtension/KeyboardExtension.entitlements
+    #   properties:
+    #     com.apple.security.application-groups:
+    #       - group.com.typeboi.shared
